@@ -12,7 +12,7 @@ func sum(xi ...int) int {
 
 	n := 0
 	for _, v := range xi{
-		n += v,
+		n += v
 	}
 	return n 
 }
