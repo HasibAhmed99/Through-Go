@@ -12,6 +12,7 @@ func main() {
 	s3 := odd(sum, ii...)
 	fmt.Println("odd numbers", s3) 
 }
+
 func sum(xi ...int) int {
 	fmt.Printf("%T\n", xi)
 	total := 0
