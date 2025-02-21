@@ -14,7 +14,7 @@ func main() {
 func factorial(n int) int {
 	fmt.Println("This is n", n)
 	if n == 0 {
-		return 1
+		return 2
 	}
 	return n * factorial(n-1)
 }
