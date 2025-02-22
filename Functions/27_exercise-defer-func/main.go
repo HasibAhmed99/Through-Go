@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	defer fmt.Println(3)
+	defer fmt.Println(2)
+	defer fmt.Println(1)
+	fmt.Println(0)
+
+}
+
+// deferred functions run in LIFO Order
+// Last In First Out = LIFO
