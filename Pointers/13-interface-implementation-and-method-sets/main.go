@@ -25,15 +25,15 @@ func youngRun(y youngin) {
 }
 
 func main() {
-	d1 := dog{"Copper"}
-	d1.walk()
-	d1.run()
-	youngRun(d1)
+	d1 := dog{"Copper"} // create a new dog instance with a name "Copper"
+	d1.walk()           // calls the walk() method
+	d1.run()            // calls the run () method
+	youngRun(d1)        // calls youngin(), which calls walk() and run()
 
-	d2 := dog{"Teddy"}
-	youngRun(d2)
-	d2 = d2.changeName("Buddy")
-	youngRun(d2)
+	d2 := dog{"Teddy"}          // create a new dog instance with a name "Teddy"
+	youngRun(d2)                // calls youngin() with "Teddy"
+	d2 = d2.changeName("Buddy") // change the name from to "Teddy" to "Buddy"
+	youngRun(d2)                // calls youngin with "Buddy"
 }
 
 func (d dog) changeName(s string) dog {
