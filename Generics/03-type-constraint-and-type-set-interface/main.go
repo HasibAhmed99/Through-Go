@@ -10,15 +10,18 @@ func addF(a, b float64) float64 {
 	return a + b
 }
 
-func addT[T int | float64](a, b T) T {
+type myNums interface {
+	int | float64
+}
+
+func addT[T myNums](a, b T) T {
 	return a + b
 }
 
 func main() {
 	fmt.Println(addI(5, 5))
-	fmt.Println(addF(2.63, 2.37))
+	fmt.Println(addF(3.67, 1.33))
 
 	fmt.Println(addT(5, 5))
-	fmt.Println(addT(2.63, 2.37))
+	fmt.Println(addT(3.67, 1.33))
 }
-						
