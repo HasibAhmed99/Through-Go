@@ -25,4 +25,9 @@ func main() {
 		return
 	}
 	fmt.Println(bks)
+
+	for _, v := range bks {
+		fmt.Println("Title:", v.Title)
+		fmt.Println("Author:", v.Author)
+	}
 }
