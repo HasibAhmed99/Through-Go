@@ -17,8 +17,8 @@ func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
 
 func main() {
-	p1 := Person{"Harry", 32}
-	p2 := Person{"Bob", 36}
+	p1 := Person{"Bob", 36}
+	p2 := Person{"Harry", 32}
 	p3 := Person{"Q", 64}
 	p4 := Person{"M", 30}
 
