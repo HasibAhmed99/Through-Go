@@ -25,6 +25,6 @@ func main() {
 	people := []Person{p1, p2, p3, p4}
 	fmt.Println(people)
 
-	sort.Sort(ByName(people))
+	sort.Sort(ByName(people)) // ByName(people) temporarily treats people as ByName so it can use Len(), Swap(), and Less().
 	fmt.Println(people)
 }
