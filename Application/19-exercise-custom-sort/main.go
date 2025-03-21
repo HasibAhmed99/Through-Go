@@ -68,6 +68,7 @@ func main() {
 
 	for _, u := range users {
 		fmt.Println(u.First, u.Last, u.Age)
+		sort.Strings(u.Sayings)
 		for _, v := range u.Sayings {
 			fmt.Println("\t", v)
 		}
