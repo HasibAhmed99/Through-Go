@@ -26,8 +26,8 @@ func (bl ByLast) Less(i, j int) bool { return bl[i].Last < bl[j].Last }
 
 func main() {
 	u1 := user{
-		First: "Harry",
-		Last:  "Potter",
+		First: "James",
+		Last:  "Bond",
 		Age:   44,
 		Sayings: []string{
 			"Shaken, not stirred",
@@ -50,7 +50,7 @@ func main() {
 	u3 := user{
 		First: "Peter",
 		Last:  "Parker",
-		Age:   36,
+		Age:   38,
 		Sayings: []string{
 			"Oh, James. You didn't.",
 			"Dear God, what has James done now?",
@@ -58,14 +58,38 @@ func main() {
 		},
 	}
 
-	people := []user{u1, u2, u3}
-	fmt.Println(people)
-	sort.Sort(ByAge(people))
-	fmt.Println(people)
+	users := []user{u1, u2, u3}
+	// fmt.Println(users)
+	// sort.Sort(ByAge(users))
+	// fmt.Println(users)
 
-	sort.Sort(ByLast(people))
-	fmt.Println(people)
+	// sort.Sort(ByLast(users))
+	// fmt.Println(users)
 
-	for _, v := range people
+	for _, u := range users {
+		fmt.Println(u.First, u.Last, u.Age)
+		for _, v := range u.Sayings {
+			fmt.Println("\t", v)
+		}
+	}
 
+	fmt.Println("--------------")
+
+	sort.Sort(ByAge(users))
+	for _, u := range users {
+		fmt.Println(u.Age, u.Last, u.Age)
+		for _, v := range u.Sayings {
+			fmt.Println("\t", v)
+		}
+	}
+
+	fmt.Println("--------------")
+
+	sort.Sort(ByLast(users))
+	for _, u := range users {
+		fmt.Println(u.First, u.Last, u.Age)
+		for _, v := range u.Sayings {
+			fmt.Println("\t", v)
+		}
+	}
 }
