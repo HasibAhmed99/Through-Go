@@ -2,24 +2,24 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 	"sync"
+	"sync/atomic"
 )
 
 func main() {
 	var wg sync.WaitGroup
 
-	incrementor := 0
+	var incrementor int64
 	gs := 100
 	wg.Add(gs)
 
 	for i := 0; i < gs; i++ {
 		go func() {
-			v := incrementor
-			runtime.Gosched()
-			v++
-			incrementor = v
-			fmt.Println(incrementor)
+			atomic.AddInt64(&incrementor, 1)
+			//atomic.LoadInt64(&incrementor)
+			r := atomic.LoadInt64(&incrementor)
+			fmt.Println(r)
+			//fmt.Println(incrementor)
 			wg.Done()
 		}()
 	}
