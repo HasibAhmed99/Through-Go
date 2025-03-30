@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	ch := make(<-chan int, 2) // receive-only
+	ch := make(<-chan int, 2) // receive-only channel
 
 	ch <- 42 // Won't work because the channels are Receive-only. So it can't be send.[And it will give compile-time error]
 	ch <- 43 // Won't work because the channels are Receive-only. So it can't be send.[And it will give compile-time error]

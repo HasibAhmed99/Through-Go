@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	ch := make(chan<- int, 2) // Send-only
+	ch := make(chan<- int, 2) // Send-only channel
 
 	ch <- 42
 	ch <- 43
