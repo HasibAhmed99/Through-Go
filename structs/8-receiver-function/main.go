@@ -21,7 +21,7 @@ func (usr User) printUser() {
 func (u User) call(s string) {
 	fmt.Println(u.name)
 	fmt.Println(u.age)
-	fmt.Println(s) // was just wondering
+	fmt.Println(s) // wanted to see what might happen
 }
 
 func main() {
