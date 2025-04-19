@@ -4,12 +4,12 @@ import "fmt"
 
 func main() {
 	rp := []string{"Rob", "Pike", "Water", "Vanila"}
-    kt := []string{"ken", "Thompson", "Water", "Chocolate"}
+	kt := []string{"ken", "Thompson", "Water", "Chocolate"}
 	fmt.Println(rp)
 	fmt.Println(kt)
 
-	ssi := [][]string{rp, kt}
-	fmt.Println(ssi)
+	mds := [][]string{rp, kt}
+	fmt.Println(mds)
 	fmt.Println("-------------")
 
 	bm := []string{"Bruno", "Mars", "Strawberry", "Water"}
@@ -17,7 +17,7 @@ func main() {
 	lg := []string{"Lady", "Gaga", "Butterscotch", "Water"}
 	fmt.Println(lg)
 
-	ssii := [][]string{bm, lg}
-	fmt.Println(ssii)
-	
+	mds2 := [][]string{bm, lg}
+	fmt.Println(mds2)
+
 }
